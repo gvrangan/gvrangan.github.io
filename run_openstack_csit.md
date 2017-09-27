@@ -1,4 +1,5 @@
 ** Procedure to Execute Openstack-ODL CSIT in local Environment **
+
 = CSIT Environment
 
 == Details  
@@ -11,12 +12,16 @@
   * The test team creates scripts to deploy various components to the slaves for testing with Opendaylight.  
   
 == System Requirements
+
 === ODL 1 node Test
+
  * 5 VMs
    * 1 - Robot VM
    * 1 - VM with ODL running
    * 3 - Openstack Nodes (1 Control + 2 Compute)
+   
 === ODL 3node test
+
  * 8 VM's (3 for ODL, 1 for HA Proxy, 3 for Openstack Nodes) + 1 for Executing Robot Tests
    * 1 - Robot VM
    * 3 - VM's with ODL running and configured for Clustering
@@ -24,20 +29,25 @@
    * 3 - Openstack Nodes (1 Control + 2 Computes)
   
 == Pre Requisites
+
 === Install ODL and configure karaf features
+
 	* In the ODL VM, Please download the required ODL distribution
 	* Untar the distro
 	* Add the feature "odl-netvirt-openstack" to the featuresBoot in the file etc/org.apache.karaf.features.cfg.
 	* To enable other netvirt features like conntract for security group and Conntrack for SNAT please use the scripts 
 	   * [set snat mode] (https://github.com/opendaylight/integration-test/blob/master/csit/scripts/set_snat_mode.sh)
 	   * [set sg implementation mode] (https://github.com/opendaylight/integration-test/blob/master/csit/scripts/set_sg_mode.sh)
-	   * [set odl as dhcp server] (https://github.com/opendaylight/integration-test/blob/master/csit/scripts/set_dhcp_mode.sh)			
+	   * [set odl as dhcp server] (https://github.com/opendaylight/integration-test/blob/master/csit/scripts/set_dhcp_mode.sh)		
 	* Start ODL using bin/start in the distro
+
 ==== Clustering
+
    * Execute the script bin/configure_cluster.sh in every ODL node to configure the ODL nodes as cluster
    * [More details] (http://docs.opendaylight.org/en/latest/getting-started-guide/common-features/clustering.html)
 
 === Install Openstack 
+
   * Openstack can be installed either using devstack or any other method
 	* You can refer to this [ODL-Openstack Integration] (https://docs.opendaylight.org/en/stable-carbon/submodules/netvirt/docs/openstack-guide/index.html)
 	  for installing the Openstack Nodes.
@@ -46,10 +56,12 @@
 	__Note: The Installation of Openstack is beyond the scope__
 
 === Test the Setup (Optional)
+
    * Perform some operations like creating Network and ensure flow entries are getting installed
    * Create slave instances and ensuring conenctivity could be more time saving instead of debugging later.
 
 === Setup Robot VM
+
     *  Using pip install "pip install robotframework" 
  
  
