@@ -36,24 +36,23 @@
 	- Untar the distro
 	- Add the feature "odl-netvirt-openstack" to the featuresBoot in the file etc/org.apache.karaf.features.cfg.
 	- To enable other netvirt features like conntract for security group and Conntrack for SNAT please use the scripts 
-	   - [set snat mode] (https://github.com/opendaylight/integration-test/blob/master/csit/scripts/set_snat_mode.sh)
-	   - [set sg implementation mode] (https://github.com/opendaylight/integration-test/blob/master/csit/scripts/set_sg_mode.sh)
-	   - [set odl as dhcp server] (https://github.com/opendaylight/integration-test/blob/master/csit/scripts/set_dhcp_mode.sh)		
+	   - [set snat mode](https://github.com/opendaylight/integration-test/blob/master/csit/scripts/set_snat_mode.sh)
+	   - [set sg implementation mode](https://github.com/opendaylight/integration-test/blob/master/csit/scripts/set_sg_mode.sh)
+	   - [set odl as dhcp server](https://github.com/opendaylight/integration-test/blob/master/csit/scripts/set_dhcp_mode.sh)		
 	- Start ODL using bin/start in the distro
 
 #### Clustering
-
    - Execute the script bin/configure_cluster.sh in every ODL node to configure the ODL nodes as cluster
-   - [More details] (http://docs.opendaylight.org/en/latest/getting-started-guide/common-features/clustering.html)
+   - [More details](http://docs.opendaylight.org/en/latest/getting-started-guide/common-features/clustering.html)
 
 ### Install Openstack 
 
         -  Openstack can be installed either using devstack or any other method
-	-  You can refer to this [ODL-Openstack Integration] (https://docs.opendaylight.org/en/stable-carbon/submodules/netvirt/docs/openstack-guide/index.html)  for installing the Openstack Nodes.
-	- You can also refer to the [script based on install guide] (https://gist.github.com/gvrangan/440afc433b6029244b3eb68e877a6456) to install control node
-	-  and [script to deploy compute node] (https://gist.github.com/gvrangan/ecb4798267d7e8c83d08829d5596d75d)
+	-  You can refer to this [ODL-Openstack Integration](https://docs.opendaylight.org/en/stable-carbon/submodules/netvirt/docs/openstack-guide/index.html)  for installing the Openstack Nodes.
+	- You can also refer to the [script based on install guide](https://gist.github.com/gvrangan/440afc433b6029244b3eb68e877a6456) to install control node
+	-  and [script to deploy compute node](https://gist.github.com/gvrangan/ecb4798267d7e8c83d08829d5596d75d)
 	
-	__Note: The Installation of Openstack is beyond the scope__
+_Note: The Installation of Openstack is beyond the scope_
 
 ### Test the Setup (Optional)
 
