@@ -45,7 +45,7 @@
 - Openstack can be installed either using devstack or any other method
 - You can refer to this [ODL-Openstack Integration](https://docs.opendaylight.org/en/stable-carbon/submodules/netvirt/docs/openstack-guide/index.html)  for installing the Openstack Nodes.
 - You can also refer to the below scripts
-[script based on install guide](https://gist.github.com/gvrangan/440afc433b6029244b3eb68e877a6456) to install control node
+[script to deply control node](https://gist.github.com/gvrangan/440afc433b6029244b3eb68e877a6456)
 [script to deploy compute node](https://gist.github.com/gvrangan/ecb4798267d7e8c83d08829d5596d75d)
 
 _Note: The Installation of Openstack is beyond the scope_
@@ -58,3 +58,4 @@ _Note: The Installation of Openstack is beyond the scope_
 -  Using pip install "pip install robotframework" 
  
 ## Executing Tests
+-  Get the Test Code 
