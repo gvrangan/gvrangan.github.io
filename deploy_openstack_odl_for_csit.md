@@ -30,10 +30,8 @@ Requires 7 VM instances
 
 ### Common Settings for all VM
 * All VM's will run the latest CentOS (7) distro
-  ```
   At the time of creating this text, latest can be found here
   [CentOS 7.4](http://mirrors.kernel.org/centos/7.4.1708/)
-  ```
   
 * Ensure that one common sudo capable username/password can login to all VM's.
 
@@ -45,7 +43,5 @@ Requires 7 VM instances
 * Ensure the instances can reach internet to download and install packages
 
 * If you have Proxy for internet, please configure the proxy details to yum.conf
-   ````
    [Ref:Add proxy settings to yum.conf](https://www.centos.org/docs/5/html/yum/sn-yum-proxy-server.html)
-   ```
 
