@@ -33,7 +33,8 @@ Requires 7 VM instances
   At the time of creating this text, latest can be found here
   [CentOS 7.4](http://mirrors.kernel.org/centos/7.4.1708/)
   
-* Ensure that one common sudo capable username/password can login to all VM's.
+* Ensure that one common sudo capable username/password can login to all VM's. i.e login with the same username/password combination
+  is possible in all VM's.
 
 * Ensure that SELINUX is disabled in all nodes.
    ```
@@ -44,4 +45,8 @@ Requires 7 VM instances
 
 * If you have Proxy for internet, please configure the proxy details to yum.conf
    [Ref:Add proxy settings to yum.conf](https://www.centos.org/docs/5/html/yum/sn-yum-proxy-server.html)
+
+
+## 
+
 
