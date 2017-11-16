@@ -281,4 +281,60 @@ Requires 7 VM instances
 	/home/evaluatech01/test/csit/suites/openstack/connectivity/01_l2_tests.robot
 ```
 
+### Uninstall Openstack
+
+* Sometimes, the deployer might fail and may warrant a rerun. At this time the below pybot command can be executed
+  to clear the setup for rerun
+
+#### 1node Openstack
+
+```
+	pybot --debug ~/debug_1node.log \
+	-v OS_CONTROL_1_IP:<CONTROL_NODE_IP> \
+	-v OS_CONTROL_NODE_IP:<CONTROL_NODE_IP> \
+	-v OS_CONTROL_1_HOSTNAME:<CONTROL_NODE_HOSTNAME> \
+	-v OS_IP:<CONTROL_NODE_IP> \
+	-v NUM_CONTROL_NODES:1 \
+	-v NUM_COMPUTE_NODES:2 \
+	-v OS_COMPUTE_1_IP:<COMPUTE_1_IP> \
+	-v OS_COMPUTE_1_HOSTNAME:<COMPUTE_1_HOSTNAME> \
+	-v OS_COMPUTE_2_IP:<COMUTE_2_IP> \
+	-v OS_COMPUTE_2_HOSTNAME:<COMPUTE_2_HOSTNAME> \
+	-v OPENSTACK_VERSION:pike \
+	-v EXT_BRIDGE:datacenter \
+	-v OS_USER:root \
+	-v OS_USER_PASSWORD:<root_password> \
+	-v OS_NODE_PROMPT:# \
+	-v ODL_RPM:http://cbs.centos.org/repos/nfv7-opendaylight-70-release/x86_64/os/Packages/opendaylight-7.0.0-1.el7.noarch.rpm \
+	~/test/csit/suites/openstack/deploy/000_destroy_setup.robot
+```
+
+#### 3node Openstack
+
+```
+	pybot --debug ~/debug_3node.log \
+	-l log_3node_install.html \
+	-v OS_CONTROL_1_IP:<CONTROL_1_IP> \
+	-v OS_CONTROL_1_HOSTNAME:<CONTROL_1_HOSTNAME> \
+	-v OS_CONTROL_2_IP:<CONTROL_2_IP> \
+	-v OS_CONTROL_2_HOSTNAME:<CONTROL_2_HOSTNAME> \
+	-v OS_CONTROL_3_IP:<CONTROL_3_IP> \
+	-v OS_CONTROL_3_HOSTNAME:<CONTROL_3_HOSTNAME> \
+	-v NUM_CONTROL_NODES:3 \
+	-v NUM_COMPUTE_NODES:2 \
+	-v OS_COMPUTE_1_IP:<COMPUTE_1_IP> \
+	-v OS_COMPUTE_1_HOSTNAME:<COMPUTE_1_HOSTNAME> \
+	-v OS_COMPUTE_2_IP:<COMPUTE_2_IP> \
+	-v OS_COMPUTE_2_HOSTNAME:<COMPUTE_2_HOSTNAME> \
+	-v HAPROXY_IP:<HAPROXY_IP> \
+	-v HAPROXY_HOSTNAME:<HAPROXY_HOSTNAME> \
+	-v OPENSTACK_VERSION:pike \
+	-v EXT_BRIDGE:datacenter \
+	-v OS_USER:root \
+	-v OS_USER_PASSWORD:<root_password> \
+	-v OS_NODE_PROMPT:# \
+	-v ODL_RPM:http://cbs.centos.org/repos/nfv7-opendaylight-70-release/x86_64/os/Packages/opendaylight-7.0.0-1.el7.noarch.rpm \
+	~/test/csit/suites/openstack/deploy/000_destroy_setup.robot
+```
+
 
